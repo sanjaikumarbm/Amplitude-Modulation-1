@@ -79,6 +79,10 @@ Program
 
 
 Output Waveform
+<img width="1486" height="1030" alt="Screenshot 2025-08-28 155029" src="https://github.com/user-attachments/assets/cb0f0af1-6c19-4193-946e-1d46676767ba" />
+<img width="960" height="570" alt="Screenshot 2025-08-28 155038" src="https://github.com/user-attachments/assets/fb4a039b-07ca-426d-b9ed-1e6b5d630b91" />
+
+
 
 
 
