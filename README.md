@@ -75,11 +75,57 @@ Compare the original modulating signal with the demodulated signal. PROCEDURE
 •	Verify the generated waveform using Tabulation and Model Waveform
 
 Program
+// AM Generation in Scilab
+
+clc;
+clear;
+close;
+
+// Parameters
+Am = 10;        // Message amplitude
+Ac = 15;        // Carrier amplitude
+fm = 5;        // Message frequency in Hz
+fc = 50;       // Carrier frequency in Hz
+mu = 0.5;      // Modulation index
+fs = 1000;     // Sampling frequency
+t = 0:1/fs:1;  // Time vector
+
+// Message signal
+m = Am * cos(2 * %pi * fm * t);
+
+// Carrier signal
+c = Ac * cos(2 * %pi * fc * t);
+
+// AM signal (standard)
+s = (Ac + mu * m) .* cos(2 * %pi * fc * t);
+
+// Plot signals
+subplot(3,1,1);
+plot(t, m);
+title('Message Signal');
+xlabel('Time (s)');
+ylabel('Amplitude');
+grid on;
+
+subplot(3,1,2);
+plot(t, c);
+title('Carrier Signal');
+xlabel('Time (s)');
+ylabel('Amplitude');
+grid on;
+
+subplot(3,1,3);
+plot(t, s);
+title('AM Signal');
+xlabel('Time (s)');
+ylabel('Amplitude');
+grid on;
 
 
 
 Output Waveform
 
+<img width="608" height="583" alt="am pic" src="https://github.com/user-attachments/assets/334520f8-c1b4-42d4-8708-b0c1920397fb" />
 
 
 
@@ -88,8 +134,9 @@ TABULATION:
 
 
 
+
 Calculation
-1.	ma (Theory) = am/ac =
+1.	ma (Theory) = am/ac = 0.67
 2.	ma(Practical) = (Emax-Emin)/(Emax+Emin) =
 
 
